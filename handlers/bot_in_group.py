@@ -27,8 +27,8 @@ chats_variant = {
 async def bot_added_as_admin(event: ChatMemberUpdated):
     await event.answer(
         text=f"Привет! Спасибо, что добавили меня в "
-            f'{chats_variant[event.chat.type]} "{event.chat.title}" '
-            f"как администратора. ID чата: {event.chat.id}"
+        f'{chats_variant[event.chat.type]} "{event.chat.title}" '
+        f"как администратора. ID чата: {event.chat.id}"
     )
 
 

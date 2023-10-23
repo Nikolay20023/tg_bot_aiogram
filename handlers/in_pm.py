@@ -7,8 +7,8 @@ from aiogram.types import ChatMemberUpdated, Message
 
 
 router = Router()
-router.my_chat_member.filter(F.chat.type == "private")
-router.message.filter(F.chat.type == "private")
+# router.my_chat_member.filter(F.chat.type == "private")
+# router.message.filter(F.chat.type == "private")
 
 
 users = {652762682, 1785935536}

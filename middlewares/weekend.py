@@ -6,7 +6,7 @@ from aiogram.types import Message, CallbackQuery
 
 
 def is_weekend() -> bool:
-    return datetime.utcnow().weekday() in (1,2)
+    return datetime.utcnow().weekday() in (1, 2)
 
 
 class WeekendMessageMiddleware(BaseMiddleware):
@@ -18,7 +18,7 @@ class WeekendMessageMiddleware(BaseMiddleware):
     ):
         if not is_weekend():
             return await handler(events, data)
-        
+
 
 class WeekendCallbackMiddleware():
     async def __call__(
@@ -29,7 +29,7 @@ class WeekendCallbackMiddleware():
     ):
         if is_weekend():
             return await handler(events, data)
-        
+
         await events.answer(
             "Бот по выходным не работает",
             show_alert=True

@@ -8,6 +8,7 @@ from filters.find_username import HasUsernameFilter
 
 router = Router()
 
+
 @router.message(
     F.text,
     HasUsernameFilter()
