@@ -6,6 +6,7 @@ from core.config import config
 from handlers import different_types, questions, group_games, events_in_group
 from handlers import checkin, in_pm, bot_in_group, admin_changes_in_group
 from handlers import ordering_dfood
+from handlers import weather_handle
 
 
 async def main():
@@ -26,7 +27,8 @@ async def main():
         bot_in_group.router,
         admin_changes_in_group.router,
         events_in_group.router,
-        ordering_dfood.router
+        ordering_dfood.router,
+        weather_handle.router
     )
     
 

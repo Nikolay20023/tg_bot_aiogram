@@ -35,7 +35,6 @@ async def food_chosen(message: Message, state: FSMContext):
         text="Спасибо. Теперь выберите размер порции",
         reply_markup=make_row_keyboard(available_entity_sizes)
     )
-
     await state.set_state(OrderFood.choosing_size)
 
 
